@@ -1,40 +1,36 @@
----
-title: "Packages in R"
+title: "Packages in Python"
 teaching: 5
 exercises: 0
 questions:
-- "How do I install packages?"
-- "How do I get help with packages?"
+
+"How do I install packages?"
+"How do I get help with packages?"
 objectives:
-- "Can install and load packages."
-- "Understands how to find help with packages."
+"Can install and load packages."
+"Understands how to find help with packages."
 keypoints:
-- "There are many packages with a wide range of features, becoming adept at utlilsiing packages is key to getting the most out of R"
----
+"There are many packages with a wide range of features; becoming adept at utilizing packages is key to getting the most out of Python."
+Packages extend the functionality of base Python by providing additional functions, datasets, and tools for specific tasks or domains. It is important to be aware that different versions of Python and package versions may be required to use multiple packages simultaneously (version compatibility). It is recommended to keep packages up to date wherever possible, as new versions normally include bug fixes, performance improvements, and new features. We should have already installed all the packages that we need for this course based on the pre-worksheet. However, as a reminder:
 
-Packages extend the functionality of base R by providing additional functions, datasets, and tools for specific tasks or domains. It is important that you are conscious that there may be specific versions of the R language and package versions required to use multiple packages simultaneously (version compatibility). It is recommended that you keep packages up to date wherever possible as new versions normally include bug fixes, performance improvements and new features. We should have already installed all the packages that we need for this course based of the pre-worksheet. However, as a reminder:
+python
+Copy code
+!pip install package_name
+Installation only needs to be done once, no matter how many projects you start. To use the package in Spyder, you need to ensure that you import it at the beginning of your script:
 
-```
-install.packages(“package_name”)
-```
-{: .language.r}
+python
+Copy code
+import package_name
+Note:
+This import statement will need to be added to the beginning of every script that needs this package.
 
-Installation only needs to be done once no matter how many projects you start. To use the package in RStudio, you need to ensure that you type:
+Help with packages
+Many packages come with documentation and tutorials. You can usually find help by referring to the official documentation or using Python's built-in help function. For example:
 
-```
-library(package_name) 
-```
-{: .language.r}
+python
+Copy code
+help(package_name)
+or
 
-> Note:   
-> This will need to be added to the beginning of every script that needs this package
-
-
-### Help with packages
-
-Many packages come with vignettes (tutorials and extended example documentation). Without any arguments, ‘vignette()’ will list all vignettes for all installed packages, ‘vignette(package=’package-name’)’ will list all available vignettes for ‘package-name’, and vignette(‘vignette-name’) will open the specified vignette. If a package doesn’t have any vignettes, you can usually find help by typing help(‘package-name’).
-
-```
-vignette("ggplot2")
-```
-{: .language.r}
+python
+Copy code
+package_name?

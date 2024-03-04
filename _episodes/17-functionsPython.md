@@ -7,43 +7,48 @@ questions:
 - "Why would I want to make my own functions?" 
 objectives:
 - "Understand function structure"
-- "Know how to use the 'apply' family of functions"
 keypoints:
 - "Functions can help reduce redundancy and increase reusability in your code"
 ---
 
 ### Exploring functions
 
-So far, we have been using in-built functions. For exmaple you type ‘sqrt()’ place your value (argument/parameters) into the function, some magic happens, and it returns an output. We will now start to the structure of functions and how we can create our own.  
+So far, we have just been using functions without exploring what they are doing. For example, you type `math.sqrt()` and place your value (argument/parameters) into the function, some magic happens, and it returns an output. We will now start to explore the structure of functions and how we can create our own.  
 
-### Function structure 
+### Function Structure
 
-> my_function <- *function*(parameters) {     
-> perform action  
-> return value  
-> }
+```python
+def function_name(parameter1, parameter2, ...):
+    """Description of the function."""
+    # Function body
+    return result
+```
+
+- **def**: Keyword to define a function.
+- **function_name**: Name of the function.
+- **(parameter1, parameter2, ...)**: Parameters (optional).
+- **Description**: Brief function description for users (not used by Python).
+- **return**: Keyword to return a value (optional).
+- **result**: Value to be returned (optional).
 
 ### Function example
 
 We can convert our previous calculation into a function. Open a new script file and type this in: 
 
+```python
+def celc_to_fahr(celc):
+    fahr = celc * 9/5 + 32
+    return fahr
 ```
-celc_to_fahr<- function(celc) { #function name and the arguments we are passing in 
-  fahr <- celc* 9/5 + 32 #the actions we are acting on our arguments 
-  return(fahr) #what we are returning 
-} 
-```
-{: .language-r}
 
-Save this script as 'my_functions' and run the lines from the script pane.
+Save this script as 'my_functions' and run it.
 
 Now we can convert Celsius to Fahrenheit in the console by typing:
 
 ```
 celc_to_fahr(14) 
 ```
-{: .language-r}
-
+{: .language-python}
 ```
 57.2
 ```
@@ -52,52 +57,11 @@ celc_to_fahr(14)
 Go back to to the script my_first_script. At the top of the script place this line:
 
 ```
-source("my_functions.R") 
+import my_functions 
 ```
-{: .language-r}
+{: .language-python}
 
 We can now run this function from my_first_script.
 
-```
-celc_to_fahr(14) 
-```
-{: .language-r}
-
-```
-57.2
-```
-{: .output}
-
 If you have generalised functions that you use often in different scripts. It is good practice to store them in a script file. You can then import them into any project that you need them for. This reduces rewriting and editing code, and reduces the chance of you introducting errors (e.g., typos, caluclation errors, etc.).
-
-If we want to run this method on multiple variables, we can use the sapply() method. This method takes data and a function. It then applies the function to every variable from the data you provided. 
-
-```
-fahrenheit_temps <- sapply(temperatures,  celc_to_fahr) 
-```
-{: .language.r}
-
-For more information on the common apply family functions, you can check: 
-
-```
-?sapply()  
-
-?lapply() 
-
-?apply() 
-```
-{: .language.r}
-
-### But wait!  
-You might be confused and thinking; the output:  
-```
-‘fahrenheit_temps’
-``` 
-looks like an identical output to 
-```
-temperatures <- temperatures * 9/5 + 32
-```
-that we processed earlier.  
-Very well spotted, we have used a slightly redundant but very simple example to highlight the process. In the future you may want to create much more complicated functions that you want to apply to large datasets, this was just a toy example to show you how. 
-
 

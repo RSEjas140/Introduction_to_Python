@@ -1,96 +1,62 @@
 ---
-title: "Lists and Data frames"
+title: "Lists and Arrays in Python"
 teaching: 10
 exercises: 0
 questions:
 - "What other data structures are there?"
 objectives:
-- "Understand the use of vectors, lists, and data frames."
+- "Understand the use of lists and arrays in Python."
 keypoints:
-- "Data frames are lists of vectors."
-- "Data frames are the most common way of storing tabular data"
-
+- "Arrays are more efficient for numerical computations compared to lists."
+- "Lists are more flexible and can hold different data types, unlike arrays."
 ---
 
 ### Lists
 
-We will take a brief look at lists. At first glance may seem very similar to vectors but we are going to cover some key differences. 
-1. Lists can hold different data types they are not restricted to a single data type like vectors
-2. They also can hold vectors. matrices, and even other lists which allows them to assume more complicated and hierarchical structures than vectors.  
+We will take a brief look at lists in Python. At first glance, lists may seem very similar to arrays, but we are going to cover some key differences. 
+1. Lists can hold different data types; they are not restricted to a single data type like arrays.
+2. Lists can hold various elements such as integers, strings, and even other lists, allowing them to have more complicated and hierarchical structures compared to arrays.  
 
 Try out: 
 
-```
-list_example <- list(1, “hello”, TRUE) 
-```
-{: .language.r}
+list_example = [1, "hello", True] 
 
-```
-vector_example <- c(1, “hello”, TRUE) 
-```
-{: .language.r}
+array_example = numpy.array([1, 2, 3])
 
-If we ouput both structures via the console:
+If we output both structures via the console:
 
-```
 list_example
-```
-{: .language.r}
 
-```
-1 "hello" TRUE
-```
-{: .output}
-```
-vector_example
-```
-{: .language.r}
+[1, "hello", True]
 
-```
-"1" "hello" "TRUE"
-```
-{: .output}
+array_example
 
+array([1, 2, 3])
 
+> ## What is different about the 'array_example' and the 'list_example'?  
+> Arrays are more efficient for numerical computations compared to lists. They are fixed in size and homogeneous, meaning all elements must be of the same data type. Lists, on the other hand, are more flexible and can hold elements of different data types.
 
-> ## What is different about the ‘vector_example’ and the ‘list_example’?  
-> We know that all variables in a vector must have the same type. If we remember the hierarchical order of coercion we know R will have to change variables to the highest variable type, in this case character. This is what we see in the vector_example.
-{: .callout}
+### Accessing elements
 
-### Addressing lists
+To access a specific element in a list, you use single brackets (e.g., "list_example[0]"). Arrays are accessed in a similar way.
 
-To access a specific element in a list you need to address with double brackets (e.g., “list_example\[\[1\]\]”). If you use single brackets, you will get access to a sub list that contains the element. 
+list_example[0]
 
-```
-list_example[[3]]
-```
-{: .language.r}
+1
 
-```
-TRUE
-```
-{: .output}
+array_example[0]
 
-```
-list_example[3]
-```
-{: .language.r}
+1
 
-```
-[[1]]
-TRUE
-```
-{: .output}
+### Arrays in Python
 
+Arrays in Python are typically represented using NumPy arrays. NumPy is a powerful library for numerical computing in Python. Arrays are more efficient for numerical computations compared to lists, especially when dealing with large datasets or performing mathematical operations.
 
-### Data frames
+NumPy arrays are homogeneous, meaning all elements must be of the same data type. They are also fixed in size, unlike lists which can dynamically resize.
 
-Data frames are a great structure to store and manipulate tabular data. They are a two-dimensional data structure where columns must contain the same data type. However, columns can hold differing data types from other columns. If you think this data structure sounds suspiciously like a list of vectors, you are correct. Data frames can be created in RStudio from the console but most commonly we are going to want to read them in from a source (e.g., csv file, excel spreadsheet, etc.).  
+```python
+import numpy as np
 
-{% include figure.html max-width="100%" file="/fig/datastructure.png" 
-alt="Variable, vector, list and dataframe visual representation" caption="Figure 1: Visual representation of how variable types are stored in the different data structures we have explored." %}
-
-
-
-
-{% include links.md %}
+array_example = np.array([1, 2, 3])
+Conclusion
+In Python, both lists and arrays have their advantages and use cases. Lists are more flexible and versatile, suitable for general-purpose programming and handling heterogeneous data. Arrays, on the other hand, are more efficient for numerical computations and large datasets, making them ideal for scientific computing and data analysis tasks.

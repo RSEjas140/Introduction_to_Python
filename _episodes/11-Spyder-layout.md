@@ -3,13 +3,13 @@ title: "Spyder Layout, navigating the IDE, project setup"
 teaching: 5
 exercises: 0
 questions:
-- "How is Spyder layed out?"
+- "How is Spyder laid out?"
 - "How do we create a project and why is it important?"
 objectives:
 - "Be familiar with the panes contained within Spyder"
 - "Be confident creating a new project and new script files"  
 keypoints:
-- "Python and Spyder are not the same thing. Spyder is an IDE that provides you with a convinient way to manage Python projects and Python is the underlying language that enables Spyder."
+- "Python and Spyder are not the same thing. Spyder is an IDE that provides you with a convenient way to manage Python projects and Python is the underlying language that enables Spyder."
 - "You will not learn everything about Python or Spyder in a day, there are a huge number of tools available to you in Spyder. The more time you commit to exploring and practicing the more you will achieve."
 - "Project management is a vital part of ensuring that you are producing maintainable, sharable, and robust software."
 ---

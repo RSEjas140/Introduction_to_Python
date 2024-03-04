@@ -5,7 +5,6 @@ exercises: 0
 questions:
 - "Where can I find help?"
 objectives:
-- "Learn how to use the in-built Spyder help pane"
 - "Know where to look for answers and how to ask the right questions"
 keypoints:
 - "You will get stuck at some point; needing help is a case of when, not if."
@@ -16,42 +15,9 @@ keypoints:
 
 It is inevitable; at some point, you will need help. For most people, it is impossible to remember every facet of the Python language. As such, you will often need to familiarize yourself with the functionality of some aspect of the Python language. The help panel built into Spyder is an excellent starting resource.
 
-Head to the console, and we will request some help about a function we used in the pre-worksheet. Type:
+### Help pane
 
-```
-help(getcwd)
-```
-{: .language-python}
-
-Note: You may have noticed that Spyder is attempting to autocomplete your commands.
-This can be very useful and efficient but can also lead to you running the wrong commands if you are not paying attention.
-
-{% include figure.html max-width="100%" file="/fig/helpwithfunctionsspyder.png"
-alt="Help pane showing getcwd() function" caption="Figure 1: Your help pane should now contain this information" %}
-
-### Help output
-Each function help page is broken down into these sections:
-
-1. Description: An extended description of what the function does.
-2. Usage: The arguments of the function and their default values (which can be changed).
-3. Arguments: An explanation of the data each argument is expecting.
-4. Details: Any important details to be aware of.
-5. Value: The data the function returns.
-6. See Also: Any related functions you might find useful.
-7. Examples: Some examples for how to use the function.
-
-Different functions might have different sections, but these are the core set.
-
-All this information may seem slightly overwhelming now, as you get more familiar with functions you will find this help more useful.
-
-You can also use the help for other aspects, like operators. Write into the console:
-
-```
-help('+')
-```
-{: .language-python}
-
-It seems unlikely that you will need help with a plus operator, but there are a whole range of operators that we will encounter that may be less obvious to you.
+The Help pane in Spyder is a feature-rich tool that provides quick access to documentation for Python functions, modules, classes, and methods directly within the IDE. It allows users to search for specific Python objects, view contextual help by hovering over code elements, and navigate through detailed documentation including function signatures, parameters, and examples. Additionally, it integrates with external documentation sources for comprehensive reference, enhancing productivity and facilitating a smoother coding experience for Python developers.
 
 External help
 If you have encountered a problem, often your question has already been answered on Stack Overflow. You can search using the [[python-3.x]] tag. If you can’t find the answer you may want to ask your own, first make sure you have read:

@@ -1,52 +1,42 @@
----
-title: "Plotting in R with ggplot2"
+
+title: "Plotting in Python with Matplotlib"
 teaching: 10
 exercises: 5
 questions:
-- "How do I create plots?"
-- "How do I use data sets to populate my plot?"
+
+"How do I create plots?"
+"How do I use data sets to populate my plot?"
 objectives:
-- "Understand how plots are formed syntactically in ggplot2."
-- "Can create plots from data sets."
-
+"Understand how plots are formed syntactically using Matplotlib."
+"Can create plots from data sets."
 keypoints:
-- "Plotting is useful tool for understanding our data it is not just for results visualisation"
----
 
-Plotting our data is one of the best ways to intuitively explore it, and the various relationships between variables. There is a base plotting system in R. But we will be using the ggplot2 package because it is more effective for creating publication-quality graphics. Ggplot2 is built on the grammar of graphics, the idea that any plot can be built from the same set of 3 components: a data set, mapping aesthetics, and graphical layers.
+"Plotting is a useful tool for understanding our data; it is not just for result visualization."
+Plotting our data is one of the best ways to intuitively explore it and understand the various relationships between variables. In Python, there are several libraries for creating plots. We'll be using Matplotlib, a versatile plotting library that provides a similar functionality to ggplot2 in R.
 
-1.	**Data sets** are the data that you provide.
-2.	**Mapping aesthetics** are what connect the data to the graphics. They tell ggplot2 how to use your data to influence how the graph looks (e.g., changing what is plotted on the X or Y axis).
-3.	**Layers** are the actual graphical output from ggplot2. Layers determine what kinds of plot are shown (scatterplot, histogram, etc.), the coordinate system used (rectangular, polar, others), and other important aspects of the plot. The idea of layers of graphics may be familiar to you if you have used image editing programs like Photoshop, Illustrator, or Inkscape.
+Data sets: These are the data that you provide.
+Mapping aesthetics: This is how you connect the data to the graphics. It tells Matplotlib how to use your data to influence how the graph looks (e.g., changing what is plotted on the X or Y axis).
+Layers: These are the actual graphical output from Matplotlib. Layers determine what kinds of plot are shown (scatter plot, histogram, etc.), the coordinate system used, and other important aspects of the plot.
+Let’s use the iris data set to generate an example using Matplotlib. In your script panel make sure you have:
 
+python
+Copy code
+import matplotlib.pyplot as plt
+python
+Copy code
+plt.scatter(df_iris['PetalLengthCm'], df_iris['PetalWidthCm'])
+plt.xlabel('Petal Length (cm)')
+plt.ylabel('Petal Width (cm)')
+plt.title('Scatter Plot of Petal Length vs. Petal Width')
+plt.show()
+Scatterplot in Spyder
+Figure 1: Output plot that we have generated using Matplotlib
 
-Let’s use the iris data set to generate an example using ggplot2. In your script panel make sure you have:
+There is a fair amount to unpack here, so we will take it section by section:
 
-```
-library(ggplot2)
-```
-{: .language.r}
-
-
-```
-ggplot(data = df_iris, mapping = aes(x = PetalLengthCm, y = PetalWidthCm)) +
-	geom_point()
-
-```
-{: .language.r}
-
-{% include figure.html max-width="100%" file="/fig/scatterplot.png" 
-alt="Scatterplot in RStudio" caption="Figure 1: Output plot that we have generated using ggplot2" %}
-
-
-There is a fair amount to unpack here so we will take it section by section. 
-1.	*data = df_iris* : is the data we are providing.
-2.	*Mapping = aes(x = ‘variable on x’, y = ‘variable on y’)* : is the variables we want plotted and on which axis.
-3.	*+ Geom_point’* : is the relationship we want between x and y, in this case a scatter plot.
-
-There are many different type of plots, if you need a specific kind of plot a good place to start is the super helpful cheat sheet on ggplot2. To explore all the different options you can go here:
-
-
-[Data visualization cheat sheet](https://www.rstudio.org/links/data_visualization_cheat_sheet)
+plt.scatter(df_iris['PetalLengthCm'], df_iris['PetalWidthCm']): This line creates a scatter plot using the Petal Length and Petal Width columns from the iris dataset.
+plt.xlabel('Petal Length (cm)') and plt.ylabel('Petal Width (cm)'): These lines label the x-axis and y-axis respectively.
+plt.title('Scatter Plot of Petal Length vs. Petal Width'): This line sets the title of the plot.
+Matplotlib offers a wide range of plot types. If you need a specific kind of plot, a good place to start is the official Matplotlib documentation or various online tutorials and resources.
 
 

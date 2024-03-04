@@ -1,25 +1,25 @@
 ---
-title: "Calculating in RStudio"
+title: "Calculating in Spyder"
 teaching: 5
 exercises: 5
 questions:
-- "How do we process mathmatical operations in RStudio?"
+- "How do we process mathematical operations in Spyder?"
 objectives:
-- "Become familiar with mathmatical operators and in-built functions in RStudio."
-- "Become confident using the console to run mathmatical operations."
+- "Become familiar with mathematical operators and in-built functions in Spyder."
+- "Become confident using the console to run mathematical operations."
 - "Understand the order of operations."
 keypoints:
 - "***PEDMAS***"
-- "Use in-built functions, you don't need to reinvent the wheel."
+- "Use mathematical functions, you don't need to reinvent the wheel."
 ---
 
 ### Dipping our toes
-We have covered some relatively dry theory so let’s take some small steps and start interacting with R. From the console we can start exploring calculation. Write in the following commands:
+We have covered some relatively dry theory so let’s take some small steps and start interacting with Python. From the console we can start exploring calculation. Write in the following commands:
 
 ```
 10 – 5 #(subtraction) 
 ```
-{: .language-r}
+{: .language-python}
 
 ```
 5
@@ -31,7 +31,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 ```
 10 + 5 #(addition) 
 ```
-{: .language-r}
+{: .language-python}
 
 ```
 15
@@ -43,7 +43,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 ```
 10 * 5 #(multiplication) 
 ```
-{: .language-r}
+{: .language-python}
 ```
 50
 ```
@@ -54,7 +54,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 ```
 10 / 5 #(division) 
 ```
-{: .language-r}
+{: .language-python}
 
 ```
 2
@@ -64,9 +64,9 @@ We have covered some relatively dry theory so let’s take some small steps and 
 
 
 ```
-5 ^ 2 #(exponentiation) 
+5 ** 2 #(exponentiation) 
 ```
-{: .language-r}
+{: .language-python}
 ```
 25
 ```
@@ -75,9 +75,9 @@ We have covered some relatively dry theory so let’s take some small steps and 
 
 
 ```
-10 %% 3 #(modulus)  
+10 % 3 #(modulus)  
 ```
-{: .language-r}
+{: .language-python}
 ```
 1
 ```
@@ -90,7 +90,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 ```
 6 + 9 / 3 
 ```
-{: .language-r}
+{: .language-python}
 {: .challenge }
 
 
@@ -100,7 +100,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 {: .output}
 
 
-If the answer was not what you were expecting you will need to become clear on order of operations in R. 
+If the answer was not what you were expecting you will need to become clear on order of operations in Python. 
 
  
 ### Remember **PE(DM)(AS)** 
@@ -123,7 +123,7 @@ To make this concept clearer, try:
 ```
 (6 + 9) / 3 
 ```
-{: .language-r}
+{: .language-python}
 
 ```
 5
@@ -134,12 +134,12 @@ Using brackets we have manipulated the order of operations to perform the additi
 
 ### Mathmatical Functions
 
-Base R provides you with a range of built in mathematical functions. If you need a fairly common operation there is a good chance it already exists. Let's look at a few examples, try:
+Combining the math package and build in functions from Python you have a good range of mathematical functions. If you need a fairly common operation there is a good chance it already exists in a package. Let's look at a few examples, try:
 
 ```
-sqrt(9) 
+math.sqrt(9) 
 ```
-{: .language-r}
+{: .language-python}
 ```
 3
 ```
@@ -148,7 +148,7 @@ sqrt(9)
 ```
 abs(-5) 
 ```
-{: .language-r}
+{: .language-python}
 ```
 5
 ```
@@ -157,12 +157,21 @@ abs(-5)
 ```
 round(3.4) 
 ```
-{: .language-r}
+{: .language-python}
 ```
 3
 ```
 {: .output}
 
+```
+math.sin(1)
+```
+{: .language-python}
+```
+0.8414709848078965
+```
+{: .output}
 
-There are a whole range of built-in functions that are available. You can check the help reference or perform a google search to find a definitive list.
+
+There are a whole range of in-built functions and additional functions available from packages. It is awlays good practice to perform a google search to discover if the function you want already exists.
 
