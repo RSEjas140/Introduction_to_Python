@@ -83,6 +83,8 @@ We have covered some relatively dry theory so let’s take some small steps and 
 ```
 {: .output}
 
+Note: anything following a '#' is considered a comment. Comments are not read by Python they are just used to inform users.
+
 
 ### Order of operations
 
@@ -100,7 +102,7 @@ We have covered some relatively dry theory so let’s take some small steps and 
 {: .output}
 
 
-If the answer was not what you were expecting you will need to become clear on order of operations in Python. 
+If the answer was **not** what you were expecting you will need to become clear on order of operations in Python. 
 
  
 ### Remember **PE(DM)(AS)** 
@@ -132,10 +134,14 @@ To make this concept clearer, try:
 
 Using brackets we have manipulated the order of operations to perform the addition before the division. Be conscious of how you structure your mathematical operations to ensure the desired results but also readability of your code. 
 
-### Mathmatical Functions
+### Mathematical Functions
 
 Combining the math package and build in functions from Python you have a good range of mathematical functions. If you need a fairly common operation there is a good chance it already exists in a package. Let's look at a few examples, try:
 
+```
+import math 
+```
+{: .language-python}
 ```
 math.sqrt(9) 
 ```

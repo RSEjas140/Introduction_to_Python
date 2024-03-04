@@ -57,11 +57,16 @@ celc_to_fahr(14)
 Go back to to the script my_first_script. At the top of the script place this line:
 
 ```
-import my_functions 
+import my_functions as mf
+```
+{: .language-python}
+
+```
+mf.celc_to_fahr(14) 
 ```
 {: .language-python}
 
 We can now run this function from my_first_script.
 
-If you have generalised functions that you use often in different scripts. It is good practice to store them in a script file. You can then import them into any project that you need them for. This reduces rewriting and editing code, and reduces the chance of you introducting errors (e.g., typos, caluclation errors, etc.).
+Wherever significant duplication exists in your code, it's advisable to create a function to replace it. This approach promotes code reusability, readability, and maintainability. If you have generalised functions that you use often in different scripts, it is good practice to store them in a script file. You can then import them into any project that you need them for. This reduces rewriting and editing code, and decreases the chance of introducing errors such as typos or calculation errors.
 

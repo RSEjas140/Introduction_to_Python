@@ -30,7 +30,11 @@ import numpy as np
 ```
 {: .languge.python}
 
-temperatures = np.array([23.5, 20.6, 15.8, 22.0]) 
+```
+temperatures = np.array([23.5, 20.6, 15.8, 22.0])
+```
+{: .languge.python}
+
 
 You can also create arrays using other methods provided by NumPy. Now try: 
 

@@ -1,5 +1,5 @@
 ---
-title: "Flow control with Python and Spyder"
+title: "Flow control"
 teaching: 25
 exercises: 5
 questions:
@@ -8,7 +8,7 @@ questions:
 - "How do we make our software robust to a wider set of use cases?"
 objectives:
 - "Understand the role of flow control in managing the order of statement execution."
-- "Understand the role and combination of logical and comparison operators in Python."
+- "Understand the role how to combine conditional, logical, and comparison operators in Python."
 keypoints:
 - "Flow control is an important technique you need to learn to create useful software."
 - "Simplicity is often the best option whenever possible."
@@ -43,6 +43,9 @@ From observing the output in the console and from a brief inspection of the code
 {% include figure.html max-width="100%" file="/fig/ifflow1.png" 
 alt="Flow diagrame for if condition" caption="Figure 1: Flow diagram for an *if* condition" %}
 
+
+### if, else
+
 Now modify your code to look like this:
 
 ```
@@ -53,7 +56,7 @@ else:
 ```
 {: .languge.python}
 
-Note: With boolean variables, we don't have to check for equivalence.
+Note: With boolean variables, we don't actually have to check for equivalence.
 
 {% include figure.html max-width="100%" file="/fig/ifflow2.png" 
 alt="Flow diagrame for if condition" caption="Figure 2: Flow diagram for an if, else condition" %}
@@ -61,7 +64,10 @@ alt="Flow diagrame for if condition" caption="Figure 2: Flow diagram for an if, 
 ### Change the condition
 Now change the rainfall variable to False and run the script again.
 
+```
 rainfall = False
+```
+{: .languge.python}
 
 ```
 "Leave your umbrella at home"
@@ -77,8 +83,8 @@ Our code now reacts differently to different input values. You can combine if, e
 
 ### Comparison operators
 We have encountered '==', which is used to check for equivalence. There are other comparison operators available to us.
-- > Greater than
-- >= Greater than or equal to
+- \> Greater than
+- \>= Greater than or equal to
 - < Less than
 - <= Less than or equal to
 - == Equal to
@@ -99,6 +105,8 @@ else:
     print("Go outside")
 ```
 {: .languge.python}
+
+By combining these operators, you can create sophisticated flow control mechanisms.
 
 ### For loops
 

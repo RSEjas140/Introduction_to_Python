@@ -19,7 +19,8 @@ It is inevitable; at some point, you will need help. For most people, it is impo
 
 The Help pane in Spyder is a feature-rich tool that provides quick access to documentation for Python functions, modules, classes, and methods directly within the IDE. It allows users to search for specific Python objects, view contextual help by hovering over code elements, and navigate through detailed documentation including function signatures, parameters, and examples. Additionally, it integrates with external documentation sources for comprehensive reference, enhancing productivity and facilitating a smoother coding experience for Python developers.
 
-External help
+### External help
+
 If you have encountered a problem, often your question has already been answered on Stack Overflow. You can search using the [[python-3.x]] tag. If you can’t find the answer you may want to ask your own, first make sure you have read:
 
 [How to ask a good question](https://www.stackoverflow.com/help/how-to-ask)

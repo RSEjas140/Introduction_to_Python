@@ -12,7 +12,6 @@ objectives:
 keypoints:
  - "When naming variables it's important be consistent and succinct"
  - "Output assignment has to be explicit to keep the result of an operation"
- - "Different data types can require different operations"
  - "Python may make assumptions about data types unless you are explicit"
 ---
 
@@ -141,8 +140,8 @@ Or this:
 Being consistent, aware of context, and conscious of your variable naming will make reading your code easier and decrease the risk of errors.   
 
 >## Useful tool
->* ***class()*** and ***typeof()***  
->You can datatype information using class() (for generalised) and typeof() (for secific) about your variables.  
+>* ***type***  
+>You can datatype information using type() on your variables.  
 {: .callout}
 
 ```
@@ -156,7 +155,7 @@ type(x)
 {: .output}
 
 
-Python provides built-in functions like int(), float(), str() so you can cast to different types.
+Python provides built-in functions like int(), float(), str() so you can cast variables to different types.
 
 ```
 x = str(x)
