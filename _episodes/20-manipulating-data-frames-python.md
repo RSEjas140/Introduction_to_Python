@@ -13,7 +13,7 @@ keypoints:
 ---
 
 ## Inspecting Datasets
-Pandas is a Python library for data manipulation and analysis, providing powerful data structures like DataFrame and Series along with a wide range of functions for tasks such as data cleaning, preparation, and exploration. It is widely used in data science and machine learning workflows for its ease of use and flexibility.There are various datasets available for use, and one popular dataset is the Iris dataset. To access the Iris dataset, we can load it using Pandas as follows:
+Pandas is a Python library for data manipulation and analysis, providing powerful data structures like DataFrame and Series along with a wide range of functions for tasks such as data cleaning, preparation, and exploration. It is widely used in data science and machine learning workflows for its ease of use and flexibility.
 
 We can now explore the Iris dataset to gain insights into its structure and contents.
 
@@ -79,3 +79,39 @@ Subsetting allows us to select specific rows or columns based on conditions:
 subset_df = iris_df[iris_df['petal_length'] > 5]
 ```
 {: .language-python}
+
+```
+# Select rows where species is 'setosa' and petal_length is less than 1.5
+subset_df = iris_df[(iris_df['species'] == 'setosa') & (iris_df['petal_length'] < 1.5)]
+```
+{: .language-python}
+
+```
+# Select rows where sepal_length is greater than 5 and species is either 'setosa' or 'versicolor'
+subset_df = iris_df[(iris_df['sepal_length'] > 5) & (iris_df['species'].isin(['setosa', 'versicolor']))]
+```
+{: .language-python}
+
+```
+# Select rows where species is 'setosa' or 'versicolor' and petal_length is not equal to 1.5
+subset_df = iris_df[(iris_df['species'].isin(['setosa', 'versicolor'])) & (iris_df['petal_length'] != 1.5)]
+```
+{: .language-python}
+
+
+### Applying a function
+
+To apply a function to a DataFrame column in Pandas, you can use the .apply() method.
+
+```
+# Define a custom function
+def square_value(x):
+    return x ** 2
+```
+{: .language-python}
+
+```
+iris_df['petal_length_squared'] = df['petal_length'].apply(square_value)
+```
+{: .language-python}
+
