@@ -3,7 +3,7 @@ title: "Pandas and manipulating data frames"
 teaching: 20
 exercises: 10
 questions:
-- "How do I organise tabular data efficiently?"
+- "How do I manage tabular data efficiently?"
 objectives:
 - "Understand how Pandas can be used to store, manipulate and subset tabular data."
 keypoints:
@@ -44,13 +44,13 @@ Adding and Removing Columns
 
 Adding:
 ```
-iris_df['sepal_ratio'] = iris_df['sepal_length'] / iris_df['sepal_width']
+iris_df['sepal.ratio'] = iris_df['sepal.length'] / iris_df['sepal.width']
 ```
 {: .language-python}
 
 Removing:
 ```
-iris_df.drop('species', axis=1, inplace=True)
+iris_df.drop('variety', axis=1, inplace=True)
 ```
 {: .language-python}
 
@@ -58,7 +58,7 @@ Adding and removing rows
 
 Adding:
 ```
-new_row = {'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 1.4, 'petal_width': 0.2, 'species': 'setosa'}
+new_row = {'sepal.length': 5.1, 'sepal.width': 3.5, 'petal.length': 1.4, 'petal.width': 0.2, 'variety': 'setosa'}
 iris_df = iris_df.append(new_row, ignore_index=True)
 ```
 {: .language-python}
@@ -76,25 +76,25 @@ Subsetting allows us to select specific rows or columns based on conditions:
 
 ```
 # Select rows where petal_length is greater than 5
-subset_df = iris_df[iris_df['petal_length'] > 5]
+subset_df = iris_df[iris_df['petal.length'] > 5]
 ```
 {: .language-python}
 
 ```
 # Select rows where species is 'setosa' and petal_length is less than 1.5
-subset_df = iris_df[(iris_df['species'] == 'setosa') & (iris_df['petal_length'] < 1.5)]
+subset_df = iris_df[(iris_df['variety'] == 'setosa') & (iris_df['petal.length'] < 1.5)]
 ```
 {: .language-python}
 
 ```
 # Select rows where sepal_length is greater than 5 and species is either 'setosa' or 'versicolor'
-subset_df = iris_df[(iris_df['sepal_length'] > 5) & (iris_df['species'].isin(['setosa', 'versicolor']))]
+subset_df = iris_df[(iris_df['sepal.length'] > 5) & (iris_df['variety'].isin(['setosa', 'versicolor']))]
 ```
 {: .language-python}
 
 ```
 # Select rows where species is 'setosa' or 'versicolor' and petal_length is not equal to 1.5
-subset_df = iris_df[(iris_df['species'].isin(['setosa', 'versicolor'])) & (iris_df['petal_length'] != 1.5)]
+subset_df = iris_df[(iris_df['variety'].isin(['setosa', 'versicolor'])) & (iris_df['petal.length'] != 1.5)]
 ```
 {: .language-python}
 
@@ -111,7 +111,8 @@ def square_value(x):
 {: .language-python}
 
 ```
-iris_df['petal_length_squared'] = df['petal_length'].apply(square_value)
+iris_df['petal.length.squared'] = df['petal.length'].apply(square_value)
 ```
 {: .language-python}
 
+Pandas is highly efficient for DataFrame manipulation due to its intuitive syntax and powerful functionalities. It offers a wide range of built-in functions for data selection, filtering, and transformation, making tasks like data cleaning and preprocessing streamlined. 

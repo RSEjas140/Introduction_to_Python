@@ -7,6 +7,7 @@ questions:
 - "Why would I want to make my own functions?" 
 objectives:
 - "Understand function structure"
+- "Confident declaring custom functions"
 keypoints:
 - "Functions can help reduce redundancy and increase reusability in your code"
 ---

@@ -123,23 +123,44 @@ In Python, a for loop is used to iterate over a sequence and perform a set of st
    - The `for` keyword is used to start the loop.
    - `item` is a variable that takes each value from the `sequence` in each iteration of the loop.
    - `sequence` is the collection of items over which the loop iterates.
-   - Indentation is used to define the block of statements to be executed for each iteration of the loop. 
+   - Indentation is used to define the block of statements to be executed for each iteration of the loop.   
 
-3. **Example:** Here's a simple example of a for loop that iterates over a list of numbers and prints each number:
+
+3. **Examples:** Here's an examples of a for loop that iterates over a range of numbers and prints each number:
    
    ```python
    for i in range(5):
        print(i)
    ```
 
-   Output:
-   ```
+  
+ ```
    0
    1
    2
    3
    4
+ ```
+ {: .output}
+
+ Here's an examples of a for loop that iterates over a list of strings and prints each string:
+
+    ```python
+   days = ['monday','tuesday','wednesday','thursday','friday']
+
+   for day in days:
+       print(day)
    ```
+
+  
+ ```
+   monday
+   tuesday
+   wednesday
+   thursday
+   friday
+ ```
+ {: .output}
 
 For loops are commonly used in Python for iterating over sequences, performing repetitive tasks, and processing collections of data.
 
