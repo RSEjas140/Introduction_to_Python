@@ -25,6 +25,7 @@ Place them in a folder (name the folder ‘data’) and change the file permissi
 To load our file, in the console, type:
 
 ```
+pip install pandas # if you have not installed pandas before
 import pandas as pd
 ```
 {: .language-python}

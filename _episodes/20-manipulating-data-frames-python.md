@@ -58,14 +58,15 @@ Adding and removing rows
 
 Adding:
 ```
-new_row = {'sepal.length': 5.1, 'sepal.width': 3.5, 'petal.length': 1.4, 'petal.width': 0.2, 'variety': 'setosa'}
-iris_df = iris_df.append(new_row, ignore_index=True)
+new_row = {'sepal.length': 5.1, 'sepal.width': 3.5, 'petal.length': 1.4, 'petal.width': 0.2,}
+iris_df.loc[len(iris_df)] = new_row
 ```
 {: .language-python}
 
 Removing:
 ```
 iris_df.drop(0, inplace=True)
+iris_df.reset_index(drop=True, inplace=True)
 ```
 {: .language-python}
 
@@ -75,6 +76,7 @@ iris_df.drop(0, inplace=True)
 Subsetting allows us to select specific rows or columns based on conditions:
 
 ```
+iris_df = pd.read_csv("data/iris.csv") #reset the dataset
 # Select rows where petal_length is greater than 5
 subset_df = iris_df[iris_df['petal.length'] > 5]
 ```
@@ -82,19 +84,19 @@ subset_df = iris_df[iris_df['petal.length'] > 5]
 
 ```
 # Select rows where species is 'setosa' and petal_length is less than 1.5
-subset_df = iris_df[(iris_df['variety'] == 'setosa') & (iris_df['petal.length'] < 1.5)]
+subset_df = iris_df[(iris_df['variety'] == 'Setosa') & (iris_df['petal.length'] < 1.5)]
 ```
 {: .language-python}
 
 ```
 # Select rows where sepal_length is greater than 5 and species is either 'setosa' or 'versicolor'
-subset_df = iris_df[(iris_df['sepal.length'] > 5) & (iris_df['variety'].isin(['setosa', 'versicolor']))]
+subset_df = iris_df[(iris_df['sepal.length'] > 5) & (iris_df['variety'].isin(['Setosa', 'Versicolor']))]
 ```
 {: .language-python}
 
 ```
 # Select rows where species is 'setosa' or 'versicolor' and petal_length is not equal to 1.5
-subset_df = iris_df[(iris_df['variety'].isin(['setosa', 'versicolor'])) & (iris_df['petal.length'] != 1.5)]
+subset_df = iris_df[(iris_df['variety'].isin(['Setosa', 'Versicolor'])) & (iris_df['petal.length'] != 1.5)]
 ```
 {: .language-python}
 
@@ -111,7 +113,7 @@ def square_value(x):
 {: .language-python}
 
 ```
-iris_df['petal.length.squared'] = df['petal.length'].apply(square_value)
+iris_df['petal.length.squared'] = iris_df['petal.length'].apply(square_value)
 ```
 {: .language-python}
 

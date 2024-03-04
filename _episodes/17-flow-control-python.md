@@ -128,39 +128,39 @@ In Python, a for loop is used to iterate over a sequence and perform a set of st
 
 3. **Examples:** Here's an examples of a for loop that iterates over a range of numbers and prints each number:
    
-   ```python
+```
    for i in range(5):
        print(i)
-   ```
+```
+{: .languge.python}
 
-  
- ```
-   0
-   1
-   2
-   3
-   4
- ```
- {: .output}
+```
+0
+1
+2
+3
+4
+```
+{: .output}
 
  Here's an examples of a for loop that iterates over a list of strings and prints each string:
 
-    ```python
-   days = ['monday','tuesday','wednesday','thursday','friday']
+```
+days = ['monday','tuesday','wednesday','thursday','friday']
 
-   for day in days:
-       print(day)
-   ```
-
+for day in days:
+    print(day)
+```
+{: .languge.python}
   
- ```
-   monday
-   tuesday
-   wednesday
-   thursday
-   friday
- ```
- {: .output}
+```
+monday
+tuesday
+wednesday
+thursday
+friday
+```
+{: .output}
 
 For loops are commonly used in Python for iterating over sequences, performing repetitive tasks, and processing collections of data.
 
