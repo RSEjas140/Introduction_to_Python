@@ -3,17 +3,18 @@ title: "Loading data into Python using Spyder"
 teaching: 5
 exercises: 5
 questions:
-"How do I load my own data into Spyder?"
+- "How do I load my own data into Spyder?"
 objectives:
-"Can load data files into Spyder."
+- "Can load data files into Spyder."
 keypoints:
-"Loading in the data is just the first step"
+- "Loading in the data is just the first step"
 ---
 
 ### Loading your data
 Getting your data into Python using Spyder is the first step to doing something interesting with it. Click both links below to download both datasets.
 
-[Download File](../fig/gapminder_data.csv)
+[Download File](../fig/gapminder_data.csv)  
+
 [Download File](../fig/iris.csv)
 
 Place them in a folder (name the folder ‘data’) and change the file permissions of the dataset to read-only. The easiest way to achieve this is to find the document in your file management system, inspect its properties, and apply read-only.
